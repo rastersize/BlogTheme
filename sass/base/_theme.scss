@@ -1,0 +1,87 @@
+$noise-bg: image-url('site-background.png') top left !default;
+$img-border: #666;
+
+// Main Link Colors
+$link-color: darken(#36c, 35) !default;
+$link-color-hover: #36c !default; // desaturate(darken($link-color, 40), 25) 
+$link-color-visited: desaturate(#36c, 25) !default;
+$link-color-active: $link-color-visited !default;
+
+// Main Section Colors
+$main-bg: transparent !default;
+$page-bg: transparent !default;
+$article-border: none !default;
+
+$header-bg: transparent !default;
+$header-border: none !default;
+$title-color: #000 !default;
+$subtitle-color: #aaa !default;
+
+$text-color: #000 !default;
+$text-color-light: #666 !default;
+$type-border: #ddd !default;
+
+/* Navigation */
+$nav-bg: transparent !default;
+$nav-bg-front: transparent !default;
+$nav-bg-back: transparent !default;
+$nav-color: $text-color !default;
+$nav-color-hover: $link-color-hover !default;
+$nav-placeholder: desaturate(darken($text-color, 10), 15) !default;
+$nav-border: lighten($text-color-light, 38) !default;
+$nav-border-top: #fff !default;
+$nav-border-bottom: $nav-border !default;
+$nav-border-left: $nav-border !default;
+$nav-border-right: #fff !default;
+
+/* Sidebar colors */
+$sidebar-bg: transparent !default;
+$sidebar-link-color: $link-color !default;
+$sidebar-link-color-hover: $link-color-hover !default;
+$sidebar-link-color-active: $link-color-active !default;
+$sidebar-color: change-color(mix($text-color, $text-color, 80), $hue: hue($text-color), $saturation: saturation($text-color)/2) !default;
+$sidebar-border: desaturate(darken($text-color, 7), 10) !default;
+$sidebar-border-hover: darken($text-color, 7) !default;
+$sidebar-link-color-subdued: lighten($sidebar-color, 20) !default;
+$sidebar-link-color-subdued-hover: $sidebar-link-color-hover !default;
+$twitter-status-link: lighten($sidebar-link-color-subdued, 15) !default;
+
+$footer-color: #888 !default;
+$footer-bg: transparent !default;
+$footer-bg-front: transparent !default;
+$footer-bg-back: transparent !default;
+$footer-color: $text-color-light !default;
+$footer-color-hover: darken($text-color-light, 10) !default;
+$footer-border-top: #fff !default;
+$footer-border-bottom: none !default;
+$footer-link-color: darken($text-color-light, 38) !default;
+$footer-link-color-hover: darken($footer-color, 25) !default;
+$page-border-bottom: lighten($text-color-light, 38) !default;
+
+
+/* Core theme application */
+
+a {
+  @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
+}
+aside.sidebar a {
+  @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
+}
+a {
+  @include transition(color .3s);
+}
+
+html {
+  background: transparent $noise-bg;
+}
+body {
+  > div {
+    background: $sidebar-bg;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid $page-border-bottom;
+    > div {
+      background: $main-bg;
+      border-right: 1px solid $sidebar-border;
+    }
+  }
+}

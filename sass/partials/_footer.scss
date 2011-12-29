@@ -1,0 +1,29 @@
+body > footer {
+  @extend .sans;
+  font-size: .75em;
+  color: $footer-link-color;
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 20em;
+  z-index: 1;
+  border-top: 1px solid $footer-border-top;
+  a {
+    @include link-colors($footer-link-color, $footer-link-color-hover, $visited: $footer-link-color);
+  }
+  p:last-child { margin-bottom: 0; }
+  ul {
+    list-style: none;
+    margin-left: 0;
+    li {
+      float: left;
+      text-transform: uppercase;
+      margin-right: .5em
+    }
+    li:last-child {
+      float: right;
+      text-transform: none;
+      margin-right: 0;
+    }
+  }
+}

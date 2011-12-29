@@ -1,0 +1,20 @@
+body > header {
+  border-bottom: 1px solid lighten($text-color-light, 38);
+  text-align: center;
+  h1 {
+    display: inline-block;
+    margin: 0;
+    a, a:visited, a:hover {
+      color: $title_color;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  h2 {
+    margin: .2em 0 0;
+    @extend .sans;
+    font-size: 1em;
+    color: $subtitle-color;
+    font-weight: normal;
+  }
+}

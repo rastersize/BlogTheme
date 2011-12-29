@@ -1,0 +1,32 @@
+.profile-image {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 550px) {
+	.profile-image { float: none; }
+}
+@media only screen and (min-width: 751px) {
+	.profile-image { float: right; }
+}
+
+.get-vcard {
+	margin-top: 1em;
+	font-size: .875em;
+}
+
+$vcard-dt-width: 5em;
+$vcard-dd-margin-from-dt: $vcard-dt-width;
+.vcard dt {
+	float: left;
+	padding-right: .5em;
+	text-align: right;
+	width: $vcard-dt-width;
+}
+.vcard dd {
+	margin-left: $vcard-dd-margin-from-dt;
+}
+.vcard dt, .vcard dd {
+	padding-bottom: .25em;
+}
