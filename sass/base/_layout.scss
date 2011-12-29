@@ -186,20 +186,18 @@ body.sidebar-footer {
   }
 }
 
-#content {
-	dl { margin-bottom: 1em; }
-	dt { font-weight: bold; }
-	dt, dd, li { padding-bottom: .25em; }
-	@media only screen and (min-width: 550px) {
-		dt { float: none; }
-	}
-	@media only screen and (min-width: 750px) {
-		dt {
-			clear: left;
-			float: left;
-			padding-right: .5em;
-			width: 10em;
-		}
+dl { margin-bottom: 1em; }
+dt { font-weight: bold; }
+dt, dd, li { padding-bottom: .25em; }
+@media only screen and (min-width: 550px) {
+	dt { float: none; }
+}
+@media only screen and (min-width: 750px) {
+	dt {
+		clear: left;
+		float: left;
+		padding-right: .5em;
+		width: 10em;
 	}
 }
 
