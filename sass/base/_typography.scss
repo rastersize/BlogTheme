@@ -6,6 +6,14 @@ $heading-font-family: 'HelveticaNeue-CondensedBold','HelveticaNeue',Helvetica,Ar
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $sans !default;
 
+$h1:	2.2em !default;
+$h2:	1.5em !default;
+$h3:	1.3em !default;
+$h4:	1em !default;
+$h5:	0.9em !default;
+$h6:	0.8em !default;
+
+
 // Fonts
 .heading {
   font-family: $heading-font-family;
@@ -34,7 +42,7 @@ body {
   @extend .sans;
 }
 h1 {
-  font-size: 2.2em;
+  font-size: $h1;
   line-height: 1.2em;
   text-shadow: #fff 0 2px 0;
 }
