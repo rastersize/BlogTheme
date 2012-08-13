@@ -1,13 +1,15 @@
 body > header {
-  border-bottom: 1px solid lighten($text-color-light, 38);
+  float: left;
+  //border-bottom: 1px solid lighten($text-color-light, 38);
+  border-right: 4px solid $title-color;
   text-align: center;
   h1 {
     display: inline-block;
+    font-weight: bold;
     margin: 0;
-    a, a:visited, a:hover {
-      color: $title_color;
+    a, a:visited {
+      color: $title-color;
       text-decoration: none;
-      font-weight: bold;
     }
   }
   h2 {

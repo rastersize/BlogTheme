@@ -1,12 +1,9 @@
 body > nav {
-  position: relative;
   background-color: $nav-bg;
   @include background($nav-bg-front, $nav-bg-back);
-  border: {
+  border: none; /*{
     top: 1px solid $nav-border-top;
-    bottom: 1px solid $nav-border-bottom; }
-  padding-top: .35em;
-  padding-bottom: .35em;
+    bottom: 1px solid $nav-border-bottom; }*/
   form {
     @include background-clip(padding-box);
     margin: 0; padding: 0;
@@ -19,7 +16,7 @@ body > nav {
       @include border-radius(.5em);
       @include background-clip(padding-box);
       border: 1px solid $nav-border;
-      color: #888;
+      color: $text-color-light;
       &:focus {
         color: #444;
         border-color: #80b1df;
@@ -34,38 +31,28 @@ body > nav {
     select{ width: 100%; font-size: .8em; border: 1px solid #888;}
   }
   ul { display: none; }
-  @media only screen and (min-width: 550px) {
-    font-size: .9em;
     ul {
-      @include horizontal-list(0);
+      list-style: none;
       float: left;
       display: block;
-      padding-top: .3em;
-    }
-    ul.subscription {
-      margin-left: .8em;
-      float: right;
-      li:last-child a { padding-right: 0; }
+      margin-left: 1em;
+      padding-top: 1em;
     }
     ul li {
+      text-transform: uppercase;
       margin: 0;
     }
     a {
       @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
-      font-family: $sans;
+      font-family: $nav-font-family;
       float: left;
       text-decoration: none;
-      font-size: 1.1em;
+      font-size: 1em;
       padding: 0;
-      line-height: 1.5em;
+      line-height: 1.55em;
     }
-    li + li {
-      border-left: 1px solid $nav-border-left;
-      margin-left: .8em;
-      a {
-        padding-left: .8em;
-        border-left: 1px solid $nav-border-right;
-      }
+    @media only screen and (min-width: 768px) {
+  	  a { font-size: 1.25em; }
     }
     form {
       float: right;
@@ -84,7 +71,6 @@ body > nav {
     }
     fieldset.mobile-nav { display: none; }
     fieldset[role=search]{ width: 99%; }
-  }
   @media only screen and (min-width: 992px) {
     form {
       width: $pad-wide - $sidebar-pad-wide*2 + 10px;
@@ -127,3 +113,4 @@ body > nav {
   }
   ul.subscription { position: relative; top: .2em; li, a { border: 0; padding: 0; }}
 }
+

@@ -101,7 +101,7 @@ p, li {
     margin: -1px 0;
     padding-left: .25em;
     padding-right: .25em;
-    border: 1px solid darken($type-border, 5);
+    border: none;
   }
   .meta code { color: $text-color-light; font-style:normal; }
   pre code { font-size: 1em !important; background: none; border: none; }

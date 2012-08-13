@@ -1,14 +1,23 @@
 .profile-image {
-	width: 200px;
-	height: 200px;
+	width: 256px;
+	height: 256px;
 	margin: 0 auto;
-	margin-bottom: 1.5em;
+	margin-bottom: -1.5em;
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+	background-image: url(/images/aron_cedercrantz.jpg);
 }
 @media only screen and (min-width: 550px) {
 	.profile-image { float: none; }
 }
 @media only screen and (min-width: 751px) {
 	.profile-image { float: right; }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+    .profile-image { background-image: url(/images/aron_cedercrantz@2x.jpg); }
 }
 
 .get-vcard {

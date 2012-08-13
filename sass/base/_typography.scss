@@ -1,10 +1,11 @@
 $blockquote: $type-border !default;
 $sans: 'HelveticaNeue-Light','HelveticaNeue',Helvetica,Arial,sans-serif !default;
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
-$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+$mono: PragmataPro, Menlo, Monaco, "Andale Mono", "Lucida Console", "Courier New", monospace !default;
 $heading-font-family: 'HelveticaNeue-CondensedBold','HelveticaNeue',Helvetica,Arial,sans-serif !default;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $sans !default;
+$nav-font-family: $heading-font-family !default;
 
 $h1:	2.2em !default;
 $h2:	1.5em !default;
@@ -23,28 +24,27 @@ $h6:	0.8em !default;
 .mono { font-family: $mono; }
 
 body > header h1 {
-  font-size: 2.5em;
-  @extend .heading;
+  font-size: 5.875em;
   font-family: $header-title-font-family;
   font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.6667em;
+  line-height: .6em;
 }
 body > header h2 {
+  font-size: .875em !important;
   font-family: $header-subtitle-font-family;
 }
 
 body {
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.5em;
   color: $text-color;
-  text-shadow: #fff 0 1px 0;
+  //text-shadow: #fff 0 1px 0;
   @extend .sans;
 }
 h1 {
   font-size: $h1;
   line-height: 1.2em;
-  text-shadow: #fff 0 2px 0;
+  //text-shadow: #fff 0 2px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -55,7 +55,9 @@ h1 {
   @extend .heading;
   text-rendering: optimizelegibility;
   margin-bottom: 1em;
-  font-weight: bold;
+  font-weight: 600;
+  color: $header-color;
+  a:hover { color: $header-link-color !important; }
 }
 h2, section h1 {
   font-size: 1.5em;

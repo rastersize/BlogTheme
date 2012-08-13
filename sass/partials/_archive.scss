@@ -8,9 +8,13 @@
     &:last-child {
       background: none;
     }
-    footer { padding: 0; margin: 0;}
+    footer {
+      padding: 0;
+      margin: 0;
+      font-size: .75em;
+    }
   }
-  h1 { color: $text-color; margin-bottom: .3em; }
+  h1 { color: $text-color; margin-bottom: 0; }
   h2 { display: none; }
   h1 {
     font-size: 1.5em;
@@ -29,7 +33,7 @@
   color: $text-color-light;
   .entry-content { display: none; }
   time {
-    font-size: .9em;
+    font-size: .875em;
     line-height: 1.2em;
     .month, .day { display: inline-block; }
     .month { text-transform: uppercase; }

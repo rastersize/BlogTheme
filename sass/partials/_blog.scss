@@ -10,17 +10,17 @@ article {
     }
     p {
       font-size: .9em;
-      color: $text-color-light;
+      // hsl(220, 25, 75)
+      color: lighten($text-color-light, 10);
       margin: 0;
       &.meta {
         @extend .sans;
         text-transform: uppercase;
-        
       }
     }
     @media only screen and (min-width: 768px) {
-      margin-bottom: 1.5em;
-      padding-bottom: 1em;
+      /*margin-bottom: 1.5em;*/
+      padding-bottom: .5em;
     }
   }
   h2 {
@@ -61,8 +61,8 @@ article {
       }
     }
   }
-  span.meta { color: $text-color-light; }
   > footer {
+    color: $text-color-light;
     padding-bottom: 2.5em;
     margin-top: 2em;
     @extend .sans;
@@ -86,8 +86,7 @@ article + article {
   article {
 	padding-top: 3em;
 	padding-bottom: 1.5em;
-	border-bottom: 1px solid $nav-border;
-	border-top: 1px solid #fff;
+	border-top: 4px solid $article-border;
   }
   article:first-child {
     padding-top: 1em;
@@ -116,12 +115,13 @@ article + article {
 }
 
 .separator {
-  content: "\2022 ";
+  content: "—";
   padding: 0 .4em 0 .2em;
   display: inline-block;
 }
 
 #content div.pagination {
+  @include pie-clearfix;
   text-align: center;
   font-size: .95em;
   position: relative;
