@@ -1,22 +1,22 @@
 body > header {
   float: left;
   //border-bottom: 1px solid lighten($text-color-light, 38);
-  border-right: 4px solid $title-color;
+  border-right: 4px solid $subtitle-color;
   text-align: center;
   h1 {
+  	position: absolute;
     display: inline-block;
-    font-weight: bold;
-    margin: 0;
-    a, a:visited {
-      color: $title-color;
-      text-decoration: none;
-    }
+    font-weight: normal;
+    top: 6.5em;
   }
   h2 {
-    margin: .2em 0 0;
-    @extend .sans;
-    font-size: 1em;
     color: $subtitle-color;
-    font-weight: normal;
+    font-weight: bold;
+    margin-top: .2em;
+    margin-bottom: .5em;
+    a, a:visited {
+      color: $subtitle-color;
+      text-decoration: none;
+    }
   }
 }

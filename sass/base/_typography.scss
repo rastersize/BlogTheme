@@ -3,8 +3,8 @@ $sans: 'HelveticaNeue-Light','HelveticaNeue',Helvetica,Arial,sans-serif !default
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
 $mono: PragmataPro, Menlo, Monaco, "Andale Mono", "Lucida Console", "Courier New", monospace !default;
 $heading-font-family: 'HelveticaNeue-CondensedBold','HelveticaNeue',Helvetica,Arial,sans-serif !default;
-$header-title-font-family: $heading-font-family !default;
-$header-subtitle-font-family: $sans !default;
+$header-title-font-family:  $sans !default;
+$header-subtitle-font-family: $heading-font-family !default;
 $nav-font-family: $heading-font-family !default;
 
 $h1:	2.2em !default;
@@ -24,13 +24,13 @@ $h6:	0.8em !default;
 .mono { font-family: $mono; }
 
 body > header h1 {
-  font-size: 5.875em;
+  font-size: .875em !important;
   font-family: $header-title-font-family;
   font-weight: normal;
   line-height: .6em;
 }
 body > header h2 {
-  font-size: .875em !important;
+  font-size: 5.875em !important;
   font-family: $header-subtitle-font-family;
 }
 
