@@ -42,6 +42,14 @@ article {
     padding: .25em;
     background-color: #fff;
   }
+  .no-border {
+    border: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
   video, .flash-video { margin: 0 auto 1.5em; }
   video { display: block; width: 100%; }
   .flash-video {
