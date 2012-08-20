@@ -1,2 +1,54 @@
-# Theme for Aron Cedercrantz website #
-See [aron.cedercrantz.com](http://aron.cedercrantz.com) for a live example. 
+# Theme for Aron Cedercrantz Website and Blog #
+See [aron.cedercrantz.com](http://aron.cedercrantz.com) for a live example.
+
+The theme was created for use with [Octopress](http://octopress.org/).
+
+## Installing the Theme
+The theme is for the [Octopress](https://github.com/imathis/octopress) blogging
+system. To install it either
+[download the theme](https://github.com/rastersize/BlogTheme/zipball/master)
+and drop the directory into the `./.themes` directory or add this repository as a
+submodule:
+
+```Shell
+git submodule add https://github.com/rastersize/BlogTheme.git .themes/BlogTheme
+git submodule update --init
+```
+
+You then need to tell Octopress to "use" the new theme.
+
+```Shell
+rake install\[BlogTheme\]
+```
+
+_Those backslashes (\) are required for me at least, you can try without them if
+you think your shell won’t mess it up._
+
+Test it out `rake generate && rake preview`.
+
+## Updating the Theme
+### Git Submodule
+
+```Shell
+cd .themes/BlogTheme
+git pull
+cd ../..
+rake update_source\[BlogTheme\]
+rake update_style\[BlogTheme\]
+```
+    
+Done, test it `rake generate && rake preview`.
+
+### Manually Installed  Directory
+
+1. [Download the theme](https://github.com/rastersize/BlogTheme/zipball/master)
+from GitHub.
+2. Copy it into your `.themes` directory.
+3. Update it
+
+```Shell
+rake update_source\[BlogTheme\]
+rake update_style\[BlogTheme\]
+```
+
+Done, test it `rake generate && rake preview`.
