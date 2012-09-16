@@ -52,3 +52,6 @@ rake update_style\[BlogTheme\]
 ```
 
 Done, test it `rake generate && rake preview`.
+
+## License
+The theme is licensed under the "Simplified BSD license" (2-clause), for the exact terms please see the [_LICENSE_ file](https://github.com/rastersize/BlogTheme/blob/develop/LICENSE).
