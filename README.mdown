@@ -1,4 +1,4 @@
-# Theme for Aron Cedercrantz Website and Blog #
+# Theme for Aron Cedercrantz’s Website and Blog #
 See [aron.cedercrantz.com](http://aron.cedercrantz.com) for a live example.
 
 The theme was created for use with [Octopress](http://octopress.org/).
@@ -54,4 +54,4 @@ rake update_style\[BlogTheme\]
 Done, test it `rake generate && rake preview`.
 
 ## License
-The theme is licensed under the "Simplified BSD license" (2-clause), for the exact terms please see the [_LICENSE_ file](https://github.com/rastersize/BlogTheme/blob/develop/LICENSE).
+The theme is licensed under the "Simplified BSD license" (2-clause), for the exact terms please see the [_LICENSE_ file](https://github.com/rastersize/BlogTheme/blob/master/LICENSE).
